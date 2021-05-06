@@ -1,1 +1,6 @@
 theme: jekyll-theme-slate
+title: ike1z's page
+description: test description
+markdown: kramdown
+highlighter: rouge
+url: "https://ike1z.github.io/"
