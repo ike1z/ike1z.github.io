@@ -1,6 +1,10 @@
 theme: jekyll-theme-slate
+language: english
 title: ike1z's page
 description: test description
 markdown: kramdown
 highlighter: rouge
 url: "https://ike1z.github.io/"
+favicon: favicon.png
+logo: favicon.png
+github_button_location_top_navbar: true
