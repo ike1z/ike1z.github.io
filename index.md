@@ -5,3 +5,4 @@ This site is under construction
 
 ## Links
 - [Test site with `Vue 3 + TypeScript + Vite`](/vite-test/)
+- Test site with `Svelte`
