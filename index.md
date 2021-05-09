@@ -1,5 +1,3 @@
-# Hello World
-
 ## General
 This site is under construction
 
