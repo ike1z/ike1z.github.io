@@ -3,15 +3,17 @@ import { computed } from "vue";
 
 console.log("App");
 const backgroundStyle = computed(() => {
-  const charcters = "ABCDEF0123456789";
-  const leftButtom = Array.from(Array(6))
-    .map(() => charcters[Math.floor(Math.random() * charcters.length)])
-    .join("");
-  const rightTop = Array.from(Array(6))
-    .map(() => charcters[Math.floor(Math.random() * charcters.length)])
-    .join("");
-  return `linear-gradient(to top right, #${leftButtom}, #${rightTop})`;
+  const leftBottom = getColorString();
+  const rightTop = getColorString();
+  return `linear-gradient(45deg, ${leftBottom}, ${rightTop})`;
 });
+
+const getColorString = () => {
+  return `rgba(${getRandomInt()}, ${getRandomInt()}, ${getRandomInt()}, 0.8)`;
+};
+const getRandomInt = () => {
+  return Math.floor(Math.random() * 255);
+};
 </script>
 
 <template>
@@ -22,7 +24,17 @@ const backgroundStyle = computed(() => {
 
 <style scoped lang="scss">
 .app {
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - 2rem);
+  min-height: calc(100vh - 2rem);
+  padding: 1rem;
+  animation: fadein 1s forwards;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
