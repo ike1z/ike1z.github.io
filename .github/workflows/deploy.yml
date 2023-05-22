@@ -16,8 +16,7 @@ jobs:
         run: |
           yarn --frozen-lockfile
           yarn build
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          path: 'ike1z.github.io/docs'
