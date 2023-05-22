@@ -6,9 +6,9 @@ console.log("home");
   <div class="home">aaa</div>
 </template>
 
-<style>
+<style scoped lang="scss">
 .home {
-  color: #aaa;
+  color: #555;
   margin-top: 20px;
 }
 </style>
