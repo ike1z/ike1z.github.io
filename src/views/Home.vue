@@ -7,6 +7,38 @@ console.log("home");
   <div class="home">
     <h1 class="title">ike1z's page</h1>
     <div class="message">I love engineering, especially frontend!</div>
+    <div class="social">
+      <a
+        href="https://github.com/ike1z"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg"
+          height="30"
+        />
+      </a>
+      <a
+        href="https://twitter.com/ike1z1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg"
+          height="30"
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/kazuki-ikeda-74531b16b/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
+          height="30"
+        />
+      </a>
+    </div>
     <div class="card-container">
       <ClayCard title="WEB engineering">
         <ul>
@@ -78,13 +110,21 @@ console.log("home");
 }
 .title {
   text-align: left;
-  padding-left: 30px;
+  margin-left: 30px;
 }
 .message {
   text-align: left;
-  padding-left: 30px;
+  margin-left: 30px;
   font-size: 24px;
   margin-bottom: 20px;
+}
+.social {
+  text-align: left;
+  margin-left: 30px;
+
+  a {
+    padding-right: 10px;
+  }
 }
 .card-container {
   display: grid;
