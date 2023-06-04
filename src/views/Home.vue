@@ -13,30 +13,21 @@ console.log("home");
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg"
-          height="30"
-        />
+        <img src="/img/github-line.svg" height="30" />
       </a>
       <a
         href="https://twitter.com/ike1z1"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg"
-          height="30"
-        />
+        <img src="/img/twitter-line.svg" height="30" />
       </a>
       <a
         href="https://www.linkedin.com/in/kazuki-ikeda-74531b16b/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img
-          src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg"
-          height="30"
-        />
+        <img src="/img/linkedin-box-line.svg" height="30" />
       </a>
     </div>
     <div class="card-container">
