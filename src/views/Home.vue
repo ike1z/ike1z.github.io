@@ -1,32 +1,15 @@
-<script setup lang="ts">
-import ClayCard from "@/components/ClayCard.vue";
-console.log("home");
-</script>
-
 <template>
   <div class="home">
     <h1 class="title">ike1z's page</h1>
     <div class="message">I love engineering, especially frontend!</div>
     <div class="social">
-      <a
-        href="https://github.com/ike1z"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://github.com/ike1z" target="_blank" rel="noopener noreferrer">
         <img src="/img/github-line.svg" height="30" />
       </a>
-      <a
-        href="https://twitter.com/ike1z1"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://twitter.com/ike1z1" target="_blank" rel="noopener noreferrer">
         <img src="/img/twitter-line.svg" height="30" />
       </a>
-      <a
-        href="https://www.linkedin.com/in/kazuki-ikeda-74531b16b/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <a href="https://www.linkedin.com/in/kazuki-ikeda-74531b16b/" target="_blank" rel="noopener noreferrer">
         <img src="/img/linkedin-box-line.svg" height="30" />
       </a>
     </div>
@@ -95,20 +78,28 @@ console.log("home");
   </div>
 </template>
 
+<script setup lang="ts">
+import ClayCard from "@/components/ClayCard.vue";
+console.log("home");
+</script>
+
 <style scoped lang="scss">
 .home {
   color: #222;
 }
+
 .title {
   text-align: left;
   margin-left: 30px;
 }
+
 .message {
   text-align: left;
   margin-left: 30px;
   font-size: 24px;
   margin-bottom: 20px;
 }
+
 .social {
   text-align: left;
   margin-left: 30px;
@@ -117,6 +108,7 @@ console.log("home");
     padding-right: 10px;
   }
 }
+
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));

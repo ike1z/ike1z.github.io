@@ -1,7 +1,3 @@
-<script setup lang="ts">
-defineProps<{ title: string }>();
-</script>
-
 <template>
   <div class="clay-card">
     <h2 class="clay-card-title" v-text="title" />
@@ -10,6 +6,11 @@ defineProps<{ title: string }>();
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps<{ title: string }>();
+</script>
+
 
 <style scoped lang="scss">
 .clay-card {
@@ -25,10 +26,12 @@ defineProps<{ title: string }>();
     inset -12px -12px 16px 0px rgba(155, 155, 155, 0.6),
     inset 0px 11px 28px 0px rgb(255, 255, 255);
 }
+
 .clay-card-title {
   text-align: left;
   padding-left: 30px;
 }
+
 .clay-card-message {
   text-align: left;
   font-size: 18px;

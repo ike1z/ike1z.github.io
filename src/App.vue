@@ -1,3 +1,9 @@
+<template>
+  <div class="app" :style="{ background: backgroundStyle }">
+    <router-view />
+  </div>
+</template>
+
 <script setup lang="ts">
 import { computed } from "vue";
 
@@ -16,12 +22,6 @@ const getRandomInt = () => {
 };
 </script>
 
-<template>
-  <div class="app" :style="{ background: backgroundStyle }">
-    <router-view />
-  </div>
-</template>
-
 <style scoped lang="scss">
 .app {
   width: calc(100vw - 2rem);
@@ -29,10 +29,12 @@ const getRandomInt = () => {
   padding: 1rem;
   animation: fadein 1s forwards;
 }
+
 @keyframes fadein {
   0% {
     opacity: 0.3;
   }
+
   100% {
     opacity: 1;
   }
