@@ -7,7 +7,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-console.log("App");
 const backgroundStyle = computed(() => {
   const leftBottom = getColorString();
   const rightTop = getColorString();

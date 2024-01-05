@@ -1,18 +1,26 @@
 <template>
-  <div class="clay-card">
-    <h2 class="clay-card-title" v-text="title" />
-    <div class="clay-card-message">
-      <slot></slot>
+  <Transition name="fade" appear>
+    <div class="clay-card">
+      <h2 class="clay-card-title" v-text="title" />
+      <div class="clay-card-message">
+        <slot></slot>
+      </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script setup lang="ts">
-defineProps<{ title: string }>();
+defineProps<{
+  title: string,
+  delay: string
+}>();
 </script>
 
 
 <style scoped lang="scss">
+h2 {
+  margin-bottom: 0;
+}
 .clay-card {
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.8);
@@ -35,5 +43,14 @@ defineProps<{ title: string }>();
 .clay-card-message {
   text-align: left;
   font-size: 18px;
+}
+
+.fade-enter-active {
+  transition: opacity 2s ease;
+  transition-delay: v-bind(delay);
+}
+
+.fade-enter-from {
+  opacity: 0;
 }
 </style>

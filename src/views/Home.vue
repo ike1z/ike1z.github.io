@@ -14,14 +14,14 @@
       </a>
     </div>
     <div class="card-container">
-      <ClayCard title="WEB engineering">
+      <ClayCard title="WEB engineering" delay="0s">
         <ul>
           <li>TypeScript, HTML, CSS - Vue.js</li>
           <li>Python - Django</li>
           <li>Ruby - Ruby on Rails</li>
         </ul>
       </ClayCard>
-      <ClayCard title="Testing">
+      <ClayCard title="Testing" delay="0.3s">
         <ul>
           <li>
             Unit test
@@ -37,7 +37,7 @@
           </li>
         </ul>
       </ClayCard>
-      <ClayCard title="Infrastructure	">
+      <ClayCard title="Infrastructure"  delay="0.6s">
         <ul>
           <li>
             AWS
@@ -50,19 +50,19 @@
           </li>
         </ul>
       </ClayCard>
-      <ClayCard title="Database">
+      <ClayCard title="Database" delay="0.9s">
         <ul>
           <li>MySQL</li>
           <li>AWS Athena - S3</li>
         </ul>
       </ClayCard>
-      <ClayCard title="CI">
+      <ClayCard title="CI" delay="1.2s">
         <ul>
           <li>GitHub Actions</li>
           <li>Circle CI</li>
         </ul>
       </ClayCard>
-      <ClayCard title="Environment">
+      <ClayCard title="Environment" delay="1.5s">
         <ul>
           <li>Docker</li>
           <li>
@@ -80,7 +80,6 @@
 
 <script setup lang="ts">
 import ClayCard from "@/components/ClayCard.vue";
-console.log("home");
 </script>
 
 <style scoped lang="scss">
@@ -116,6 +115,10 @@ console.log("home");
   justify-items: center;
   align-content: space-evenly;
   align-items: center;
+
+  ul {
+    margin: 10px 0
+  }
 
   li ul {
     padding-left: 20px;
