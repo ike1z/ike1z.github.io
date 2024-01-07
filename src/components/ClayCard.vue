@@ -1,24 +1,41 @@
 <template>
-  <Transition name="fade" appear>
+  <Transition name="fadeCard" appear>
     <div class="clay-card">
-      <h2 class="clay-card-title" v-text="title" />
-      <div class="clay-card-message">
-        <slot></slot>
-      </div>
+      <Spinner v-if="isLoading" :style="{ width: '100px', height: '100px' }" />
+      <template v-else>
+        <Transition name="fadeText" appear>
+          <h2 class="clay-card-title" v-text="title" />
+        </Transition>
+        <Transition name="fadeText" appear>
+          <div class="clay-card-message">
+            <slot></slot>
+          </div>
+        </Transition>
+      </template>
     </div>
   </Transition>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { ref, computed, onMounted } from "vue";
+import Spinner from "@/components/Spinner.vue";
 
 const props = defineProps({
   title: { type: String, required: true },
   delay: { type: Number, default: 0 },
 });
 
-
+const isLoading = ref(true)
 const delayString = computed(() => `${props.delay}ms`)
+
+onMounted(() => {
+  const randomInt = Math.floor(Math.random() * 1000) + 500;
+
+  setTimeout(() => {
+    isLoading.value = false;
+  }, props.delay + randomInt);
+
+})
 </script>
 
 
@@ -59,12 +76,25 @@ h2 {
   font-size: 18px;
 }
 
-.fade-enter-active {
+.fadeCard-enter-active {
   transition: opacity 2s ease;
   transition-delay: v-bind(delayString);
 }
 
-.fade-enter-from {
+.fadeCard-enter-from {
+  opacity: 0;
+}
+
+.fadeText-enter-active {
+  transition: opacity 1s ease;
+
+  &.clay-card-message {
+    transition-delay: 500ms;
+
+  }
+}
+
+.fadeText-enter-from {
   opacity: 0;
 }
 </style>
