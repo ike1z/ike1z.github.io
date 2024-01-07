@@ -1,10 +1,18 @@
 import { defineConfig } from "vite";
+import Unfonts from "unplugin-fonts/vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Unfonts({
+      google: {
+        families: [{ name: "M PLUS Rounded 1c", styles: "wght@400;700" }],
+      },
+    }),
+  ],
   build: {
     outDir: "docs",
   },

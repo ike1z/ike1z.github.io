@@ -117,7 +117,7 @@ import ClayCard from "@/components/ClayCard.vue";
   align-items: center;
 
   ul {
-    margin: 10px 0
+    margin: 5px 0
   }
 
   li ul {
