@@ -21,6 +21,7 @@ defineProps<{
 h2 {
   margin-bottom: 0;
 }
+
 .clay-card {
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.8);
@@ -29,10 +30,18 @@ h2 {
   margin: 20px 0;
   border-radius: 20px;
   color: #444;
+  transition: transform 200ms, box-shadow 200ms;
 
-  box-shadow: 20px 20px 40px 0px rgba(50, 50, 50, 0.8),
+  box-shadow: 20px 20px 30px 0px rgba(50, 50, 50, 0.8),
     inset -12px -12px 16px 0px rgba(155, 155, 155, 0.6),
     inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 20px 20px 50px 0px rgba(50, 50, 50, 0.8),
+      inset -12px -12px 16px 0px rgba(155, 155, 155, 0.6),
+      inset 0px 11px 28px 0px rgb(255, 255, 255);
+  }
 }
 
 .clay-card-title {
