@@ -14,14 +14,14 @@
       </a>
     </div>
     <div class="card-container">
-      <ClayCard title="WEB engineering" delay="0s">
+      <ClayCard title="WEB engineering">
         <ul>
           <li>TypeScript, HTML, CSS - Vue.js</li>
           <li>Python - Django</li>
           <li>Ruby - Ruby on Rails</li>
         </ul>
       </ClayCard>
-      <ClayCard title="Testing" delay="0.3s">
+      <ClayCard title="Testing" :delay="300">
         <ul>
           <li>
             Unit test
@@ -37,7 +37,7 @@
           </li>
         </ul>
       </ClayCard>
-      <ClayCard title="Infrastructure"  delay="0.6s">
+      <ClayCard title="Infrastructure" :delay="600">
         <ul>
           <li>
             AWS
@@ -50,19 +50,19 @@
           </li>
         </ul>
       </ClayCard>
-      <ClayCard title="Database" delay="0.9s">
+      <ClayCard title="Database" :delay="900">
         <ul>
           <li>MySQL</li>
           <li>AWS Athena - S3</li>
         </ul>
       </ClayCard>
-      <ClayCard title="CI" delay="1.2s">
+      <ClayCard title="CI" :delay="1200">
         <ul>
           <li>GitHub Actions</li>
           <li>Circle CI</li>
         </ul>
       </ClayCard>
-      <ClayCard title="Environment" delay="1.5s">
+      <ClayCard title="Environment" :delay="1500">
         <ul>
           <li>Docker</li>
           <li>

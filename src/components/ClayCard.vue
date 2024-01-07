@@ -10,10 +10,15 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  title: string,
-  delay: string
-}>();
+import { computed } from "vue";
+
+const props = defineProps({
+  title: { type: String, required: true },
+  delay: { type: Number, default: 0 },
+});
+
+
+const delayString = computed(() => `${props.delay}ms`)
 </script>
 
 
@@ -56,7 +61,7 @@ h2 {
 
 .fade-enter-active {
   transition: opacity 2s ease;
-  transition-delay: v-bind(delay);
+  transition-delay: v-bind(delayString);
 }
 
 .fade-enter-from {
